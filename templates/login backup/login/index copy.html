@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>Animated Form Switching with jQuery</title>
+    </head>
+    <body>
+		<div class="wrapper">     
+					<form class="forgot_password" method="POST">
+            {% csrf_token %}
+            {{ form }}
+            <h3>Forgot Password</h3>
+						<div>
+							<label>Username or Email:</label>
+							<input type="text" name="forgot_password"/>
+						</div>
+            <button type="submit"/>
+					</form>
+			</div>
+		</div>
+    </body>
+</html>

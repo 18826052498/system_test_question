@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>试题表</title>
+		<meta charset="utf-8">
+
+        <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+        <script src="/static/jquery/dist/jquery.min.js"></script>
+        <script src="/static/js/bootstrap.min.js"></script>
+        <style type="text/css">
+            body {background-image:url(/static/img/bg.gif) }
+        </style>
+	</head>
+	<body>
+    {% include 'nav.html' %}
+	<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<div class="jumbotron">
+				<h1>
+				</h1>
+				<p>
+                    {{ question.difficulty }}  <!-- 试题难度 -->
+				</p>
+				<p>
+                    {{ question.create_date }} <!-- 创建时间 -->
+				</p>
+                <p>
+                    {% autoescape off %}{{ question.description }}{% endautoescape %} <!-- 题目 -->
+                </p>
+                <p>
+                    {% autoescape off %}{{ question.answer }}{% endautoescape %} <!-- 答案 -->
+                </p>
+			</div>
+			<div class="btn-group btn-group-lg ">
+				<button class="btn btn-danger "  type="button">
+				<em class="glyphicon glyphicon-thumbs-up"></em>  困难
+				</button> 
+				<button class="btn btn-warning" type="button">
+				<em class="glyphicon glyphicon-hand-up"></em> 中等
+				</button> <button class="btn btn-success" type="button">
+				<em class="glyphicon glyphicon-thumbs-down"></em>  容易
+				</button> <button class="btn btn-default" type="button">
+				<em class="glyphicon glyphicon-trash"></em> 斩杀
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+	</body>
+</html>
